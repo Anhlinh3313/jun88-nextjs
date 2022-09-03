@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "antd": "^4.22.8",
+    "bootstrap": "^5.2.0",
+    "next": "latest",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "reactstrap": "^9.1.4",
+    "swiper": "^8.3.2"
+  }
+}
