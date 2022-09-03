@@ -2,6 +2,7 @@ import Head from "next/head";
 import HomeIndex from "../app/pages";
 import "bootstrap/dist/css/bootstrap.css";
 import { useEffect, useState } from "react";
+import bg from "../app/styles/@img/bg.jpg";
 
 export default function Home() {
   const [chromeWidth, setChromeWidth] = useState(
@@ -30,7 +31,7 @@ export default function Home() {
         <style>{`
           .body {
             height: 100%;
-            background-image: url(https://jun88.vin/images/bg.jpg);
+            background-image: url(${bg.src});
             background-position: center;
             background-repeat: no-repeat;
             position: relative;
@@ -40,7 +41,7 @@ export default function Home() {
         <style>{`
           .body {
             height: 100%;
-            background-image: url(https://jun88.vin/images/bg.jpg);
+            background-image: url(${bg.src});
             background-position: center;
             background-repeat: no-repeat;
             position: relative;

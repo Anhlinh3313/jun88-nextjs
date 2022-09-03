@@ -19,6 +19,3 @@ export { default as ImgSKM } from "./sieukhuyenmai.jpg";
 
 
 
-
-
-

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Img50ty, ImgLogo, ImgQuaKhung, ImgQuaVip, ImgRinging, ImgSHT50, ImgSieuLiXi, ImgSKM, ImgSTTV, ImgTele, ImgThuongKhiThang } from "../../styles/@img";
 import SwiperCore,{ EffectFade, Autoplay } from 'swiper';
+import styles from '../page.module.scss';
 
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -43,16 +44,17 @@ function Home() {
         <div class="container text-center">
           <div class="row">
             <div class="col">
-              <div className="box-promos">
-                <div className="swiper-container">
-                  <div className="swiper-wrapper">
+              <div className={styles['box-promos']}>
+                <div className={styles['swiper-container']}>
+                  <div className={styles['swiper-wrapper']}>
                   <Swiper
                   direction={"vertical"}
                   // modules={[EffectFade]}
-                  effect="coverflow"
-                  // slidesPerView={2}s
-                  centeredSlides
-                  autoplay={true}
+                  slidesPerView={3}
+                  centeredSlides = {true}
+                  // autoplay={true}
+                  reverseDirection={true}
+                  disableOnInteraction={true}
                   >
                     <SwiperSlide>
                       <a href="https://www.jun82.com/promotions/39153765-76eb-4bef-8b0c-6a7bebb936cd" target="_blank">
@@ -91,7 +93,7 @@ function Home() {
                     </SwiperSlide>
                     <SwiperSlide>
                       <a href="https://www.jun82.com/promotions" target="_blank">
-                      <Image src={ImgSKM} alt="Alternate Text"
+                      <Image className={styles['swiper-slide img']} src={ImgSKM} alt="Alternate Text"
                       />
                       </a>
                     </SwiperSlide>
@@ -555,18 +557,7 @@ function Home() {
               color: #02a9dc;
             }
 
-            .box-promos {
-              padding: 10px 0;
-              width: 100%;
-              height: 430px;
-            }
-
-            .swiper-container {
-              margin: 0 auto;
-              width: 100%;
-              height: 100%;
-              overflow: hidden;
-            }
+            
 
 
             .float-lg-left {
@@ -815,7 +806,6 @@ function Home() {
             border-radius: 50%;
             animation: at-ripple-blue 0.6s linear infinite;
           }
-
 
           `}</style>
     </div>

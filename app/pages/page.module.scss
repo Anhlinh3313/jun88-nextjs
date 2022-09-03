@@ -1,0 +1,42 @@
+.box-promos {
+    padding: 10px 0;
+    width: 100%;
+    height: 430px;
+  }
+
+.swiper-container {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.swiper-container .swiper-slide-active img {
+    opacity: 100%;
+    filter: unset;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    animation: hightlight 0.5s infinite;
+}
+
+.swiper-container .swiper-slide-active {
+    transform: scale(1.2, 2);
+    z-index: 1;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    cursor: pointer;
+}
+
+.swiper-slide img {
+    background-size: contain;
+    width: 80%;
+    height: 100%;
+    filter: brightness(0.3);
+    border-radius: 8px;
+}
